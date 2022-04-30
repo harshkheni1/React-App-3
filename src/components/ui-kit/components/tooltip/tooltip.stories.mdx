@@ -1,0 +1,17 @@
+import { Tooltip } from '../../';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './tooltip.stories';
+
+<Meta title="Core/Tooltip" component={Tooltip} />
+
+# Tooltip
+
+### Basic Tooltip
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Props
+<Props of={Tooltip} />
+
+```type TooltipPositionType = number | 'auto';```

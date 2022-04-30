@@ -1,0 +1,309 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Button, Icon, Row, Col } from '../../';
+import { ButtonDefault } from './const';
+import * as stories from './button.stories';
+
+<Meta title="Core/Button" component={Button} />
+
+# Button
+
+### Basic Button
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(ButtonDefault)}</Story>
+</Preview>
+
+### Variants
+
+<Preview>
+    <Button variant="solid">Solid Button</Button>
+    <Button variant="outlined">Outlined Button</Button>
+    <Button variant="flat">Flat Button</Button>
+    <Button variant="link">Link Button</Button>
+</Preview>
+
+### Solid
+
+<Preview>
+  <Story name="Solid">
+    <div>
+      <Row>
+        <Col col={4}><Button color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+      <p>disabled</p>
+      <Row>
+        <Col col={4}><Button disabled color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+    </div>
+  </Story>
+</Preview>
+
+### Outlined
+
+<Preview>
+  <Story name="outlined">
+    <div>
+      <Row>
+        <Col col={4}><Button variant="outlined" color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="outlined" color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="outlined" color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="outlined" color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="outlined" color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="outlined" color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+      <p>disabled</p>
+      <Row>
+        <Col col={4}><Button disabled variant="outlined" color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="outlined" color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="outlined" color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="outlined" color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="outlined" color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="outlined" color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+    </div>
+  </Story>
+</Preview>
+
+### Flat
+
+<Preview>
+  <Story name="flat">
+    <div>
+      <Row>
+        <Col col={4}><Button variant="flat" color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="flat" color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="flat" color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="flat" color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="flat" color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="flat" color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+      <p>disabled</p>
+      <Row>
+        <Col col={4}><Button disabled variant="flat" color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="flat" color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="flat" color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="flat" color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="flat" color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="flat" color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+    </div>
+  </Story>
+</Preview>
+
+### Link
+
+<Preview>
+  <Story name="link">
+    <div>
+      <Row>
+        <Col col={4}><Button variant="link" color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="link" color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="link" color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="link" color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="link" color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button variant="link" color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+      <p>disabled</p>
+      <Row>
+        <Col col={4}><Button disabled variant="link" color="primary">primary Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="link" color="primaryDark">primaryDark Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="link" color="secondaryLight">secondaryLight Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="link" color="gray500">gray500 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="link" color="gray700">gray700 Button</Button><br /><br /></Col>
+        <Col col={4}><Button disabled variant="link" color="gray800">gray800 Button</Button><br /><br /></Col>
+      </Row>
+    </div>
+  </Story>
+</Preview>
+
+### Types
+
+<Preview>
+    <Button type="button">Type Button</Button>
+    <Button type="reset">Type Reset</Button>
+    <Button type="submit">Type Submit</Button>
+</Preview>
+
+### Size
+
+<Preview>
+    <Button measure="md">
+        Md Button
+    </Button>
+    <Button measure="sm">
+        Sm Button
+    </Button>
+</Preview>
+
+### Full With
+
+<Preview>
+    <Button fullWidth>
+        Full Width Button
+    </Button>
+</Preview>
+
+### Disabled
+
+<Preview>
+    <Button disabled variant="solid">
+        Solid Button
+    </Button>
+    <Button disabled variant="outlined">
+        Outlined Button
+    </Button>
+    <Button disabled variant="flat">
+        Flat Button
+    </Button>
+    <Button disabled variant="link">
+        Link Button
+    </Button>
+</Preview>
+
+### With Icon
+
+<Preview>
+    <Button shade={false} variant="solid">
+        <Icon name="check" mr={10} />
+        Solid Button
+    </Button>
+    <Button variant="outlined">
+        <Icon name="check" mr={10} />
+        Outlined Button
+    </Button>
+    <Button variant="flat">
+        Flat Button
+        <Icon name="check" ml={10} />
+    </Button>
+    <Button variant="link">
+        <Icon name="check" mr={10} />
+        Link Button
+    </Button>
+</Preview>
+
+### Shade
+
+<Preview>
+    <Button shade={true} variant="solid">
+        With Shade Solid
+    </Button>
+    <Button shade={true} variant="outlined">
+        With Shade Outlined
+    </Button>
+    <Button shade={true} variant="flat">
+        With Shade Flat
+    </Button>
+</Preview>
+
+### Uppercase
+
+<Preview>
+    <Button uppercase={false} variant="solid">
+        Uppercase false
+    </Button>
+    <Button uppercase={false} variant="outlined">
+        Uppercase false
+    </Button>
+    <Button uppercase={false} variant="flat">
+        Uppercase false
+    </Button>
+    <Button uppercase={false} variant="link">
+        Uppercase false
+    </Button>
+</Preview>
+
+### As
+
+<Preview>
+    <Button as="button">
+        As Button tag
+    </Button>
+    <Button as="label">
+        As Label tag
+    </Button>
+    <Button as="a">
+        As a tag
+    </Button>
+    <Button as="div">
+        As div tag
+    </Button>
+</Preview>
+
+### Font Weight
+
+<Preview>
+     <Row>
+        <Col col={4}>
+            <Button mb={15} fontWeight="thin">
+                thin font weight
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button mb={15} fontWeight="light">
+                light font weight
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button mb={15} fontWeight="medium">
+                medium font weight
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button fontWeight="bold">
+                bold font weight
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button fontWeight="xbold">
+                xbold font weight
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button fontWeight="black">
+                black font weight
+            </Button>
+        </Col>
+    </Row>
+</Preview>
+
+### Align
+
+<Preview>
+     <Row>
+        <Col col={4}>
+            <Button mb={15} fullWidth align="left">
+                 left align
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button mb={15} fullWidth align="center">
+                 center align
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button mb={15} fullWidth align="right">
+                 right align
+            </Button>
+        </Col>
+        <Col col={4}>
+            <Button mb={15} fullWidth align="justify">
+                 justify align
+            </Button>
+        </Col>
+    </Row>
+</Preview>
+
+
+### Props
+
+<Props of={Button} />

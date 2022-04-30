@@ -1,0 +1,40 @@
+import { Popover } from '../../';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './popover.stories';
+
+<Meta title="Core/Popover" component={Popover} />
+
+# Modal
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+```
+<Popover.Wrap>
+  <Button variant="solid" color="primaryDark" onClick={changePopoverState}>
+    Open popover
+  </Button>
+  <Popover isOpen={popoverState} onClose={changePopoverState}>
+    <Popover.Header>
+      <Popover.Title>Edit Section</Popover.Title>
+    </Popover.Header>
+    ...
+  </Popover>
+</Popover.Wrap>
+```
+
+### Popover Attributes
+
+```
+interface PopoverStaticProps {
+  Wrap?: FC<PopoverElementProps>;
+  Header?: FC<PopoverElementProps> & WithStyle;
+  Title?: FC<PopoverElementProps> & WithStyle;
+  Body?: FC<PopoverElementProps> & WithStyle;
+}
+```
+
+### Popover Props
+
+<Props of={Popover} />

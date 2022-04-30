@@ -1,0 +1,44 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Dropdown, Col, Row, Button, Box } from '../../';
+import * as stories from './dropdown.stories';
+
+<Meta title="Core/Dropdown" component={Dropdown} />
+
+# Dropdown
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+# Dropdown Example
+<Preview withToolbar>
+    <Row justifyContent="center">
+      <Col col={2}>
+        <Dropdown>
+          <Button>
+            Dropdown
+          </Button>
+          <Dropdown.Menu active={true}>
+            <Dropdown.Item>
+              <Dropdown.Link>
+                Dropdown Item
+              </Dropdown.Link>
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Box mb={200} />
+      </Col>
+    </Row>
+</Preview>
+
+### Props
+<Props of={Dropdown} />
+
+### Attributes Dropdown
+```
+export interface DropdownStaticProps {
+  Menu?: FC<DropdownMenuProps> & WithStyle;
+  Item?: FC<DropdownItemProps> & WithStyle;
+  Link?: FC<DropdownLinkProps> & WithStyle;
+}
+```
+

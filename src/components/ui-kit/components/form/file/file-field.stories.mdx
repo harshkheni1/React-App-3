@@ -1,0 +1,14 @@
+import { Form } from 'react-uforms';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormFileField } from '../../../';
+import * as stories from './file.stories';
+
+<Meta title="Form/File" />
+
+# File field
+<Preview withToolbar>
+  <Story name="Field">{stories.FileField()}</Story>
+</Preview>
+
+# File field props
+<Props of={FormFileField} />

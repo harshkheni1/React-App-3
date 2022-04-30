@@ -1,0 +1,249 @@
+import { Form } from 'react-uforms';
+import { Row, Col, Box, FormInput, FormInputClearable, FormInputField, FormInputEmail, FormInputEmailField,  } from '../../../';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormInputRawStyled, FormInputRawWrapStyled  } from './input.styled';
+import * as stories from './input.stories';
+
+<Meta title="Form/Input" />
+
+# FormInput / FormInputField
+<Preview>
+  <Story name="Basic">{stories.Input()}</Story>
+  <Story name="Field">{stories.InputField()}</Story>
+</Preview>
+
+### FormInput / FormInputField measure
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+      <Col col={6}>
+        <FormInput measure="sm" name="size_sm" />
+        <Box mb={15} />
+        <FormInput measure="md" name="size_md" />
+        <Box mb={15} />
+        <FormInput measure="lg" name="size_lg" />
+        <Box mb={15} />
+      </Col>
+      <Col col={6}>
+        <FormInputField label="Size SM" measure="sm" name="size_sm" />
+        <Box mb={15} />
+        <FormInputField label="Size MD" measure="md" name="size_md" />
+        <Box mb={15} />
+        <FormInputField label="Size LG" measure="lg" name="size_lg" />
+        <Box mb={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### FormInput / FormInputField states
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+      <Col col={6}>
+        <FormInput disabled name="disabled" />
+        <Box mb={15} />
+        <FormInput className="is-success" name="is-success" />
+        <Box mb={15} />
+        <FormInput className="is-invalid" name="input_error" />
+        <Box mb={15} />
+      </Col>
+      <Col col={6}>
+        <FormInputField disabled label="Disabled"  name="disabled" />
+        <Box mb={15} />
+        <FormInputField label="Success class" className="is-success" name="is-success" />
+        <Box mb={15} />
+        <FormInputField label="Invalid class" className="is-invalid" name="input_error"  />
+        <Box mb={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+
+# FormInputRaw / FormInputEmailField
+<Preview>
+  <Story name="Raw">{stories.InputRaw()}</Story>
+  <Story name="Raw Wrap">{stories.InputRawWrap()}</Story>
+</Preview>
+
+### FormInputRaw / FormInputEmailField examples
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+      <Col col={6}>
+        <FormInputRawStyled placeholder="Enter" name="raw" />
+        <Box mb={15} />
+        <FormInputRawStyled disabled  placeholder="disabled" name="disabled" />
+        <Box mb={15} />
+      </Col>
+      <Col col={6}>
+        <FormInputRawWrapStyled name="rawWrap">
+          <input
+            onChange={function onChange(e) {return console.log(e);}}
+            placeholder="Enter"
+            type="text"
+          />
+        </FormInputRawWrapStyled>
+        <Box mb={15} />
+        <FormInputRawWrapStyled>
+          <input
+            disabled
+            name="disabled"
+            onChange={function onChange(e) {return console.log(e);}}
+            placeholder="Enter"
+            type="text"
+          />
+        </FormInputRawWrapStyled>
+        <Box mb={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### FormInput props
+<Props of={FormInput} />
+
+### FormInputField props
+<Props of={FormInputField} />
+
+# FormInputEmail / FormInputEmailField
+<Preview>
+  <Story name="Basic Email">{stories.InputEmail()}</Story>
+  <Story name="Email Field">{stories.InputEmailField()}</Story>
+</Preview>
+
+### FormInputEmail / FormInputEmailField measure
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+      <Col col={6}>
+        <FormInputEmail measure="sm" name="size_sm" />
+        <Box mb={15} />
+        <FormInputEmail measure="md" name="size_md" />
+        <Box mb={15} />
+        <FormInputEmail measure="lg" name="size_lg" />
+        <Box mb={15} />
+      </Col>
+      <Col col={6}>
+        <FormInputEmailField label="Size SM" measure="sm" name="size_sm" />
+        <Box mb={15} />
+        <FormInputEmailField label="Size MD" measure="md" name="size_md" />
+        <Box mb={15} />
+        <FormInputEmailField label="Size LG" measure="lg" name="size_lg" />
+        <Box mb={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### FormInput / FormInputField states
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+      <Col col={6}>
+       <FormInputEmail disabled name="disabled" />
+       <Box mb={15} />
+       <FormInputEmail className="is-success" name="is-success" />
+       <Box mb={15} />
+       <FormInputEmail className="is-invalid" name="input_error" />
+       <Box mb={15} />
+     </Col>
+     <Col col={6}>
+      <FormInputEmailField disabled label="Disabled"  name="disabled" />
+      <Box mb={15} />
+      <FormInputEmailField label="Success class" className="is-success" name="is-success" />
+      <Box mb={15} />
+      <FormInputEmailField label="Invalid class" className="is-invalid" name="input_error"  />
+     <Box mb={15} />
+     </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### FormInputEmail props
+<Props of={FormInputEmail} />
+
+### FormInputEmailField props
+<Props of={FormInputEmailField} />
+
+# FormInputClearable
+<Preview>
+  <Story name="Clearable">{stories.InputClearable()}</Story>
+</Preview>
+
+### FormInputClearable examples
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+      <Col col={6}>
+       <FormInputClearable
+           measure="sm"
+           name="sm"
+           placeholder="Size SM"
+           type="text"
+         />
+       <Box mb={15} />
+       <FormInputClearable
+           measure="md"
+           name="md"
+           placeholder="Size MD"
+           type="text"
+         />
+       <Box mb={15} />
+       <FormInputClearable
+           measure="lg"
+           name="lg"
+           placeholder="Size LG"
+           type="text"
+         />
+       <Box mb={15} />
+     </Col>
+     <Col col={6}>
+       <FormInputClearable
+           disabled
+           name="sm"
+           placeholder="disabled"
+           type="text"
+         />
+       <Box mb={15} />
+       <FormInputClearable
+           clearable={false}
+           name="success"
+           placeholder="Success class"
+           type="text"
+           className="is-success"
+         />
+       <Box mb={15} />
+       <FormInputClearable
+           name="invalid"
+           placeholder="Invalid class"
+           type="text"
+           className="is-invalid"
+         />
+       <Box mb={15} />
+     </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### FormInputClearable props
+<Props of={FormInputClearable} />

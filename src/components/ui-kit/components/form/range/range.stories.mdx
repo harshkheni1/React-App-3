@@ -1,0 +1,54 @@
+import { Form } from 'react-uforms';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormRange, FormLabel, FormInput, Box, Button, Row, Col } from '../../../';
+import * as stories from './range.stories';
+
+<Meta title="Form/Range" />
+
+# Range
+<Preview withToolbar>
+  <Story name="Basic">{stories.Range()}</Story>
+</Preview>
+
+# Range Examples
+<Preview>
+  <Form
+    defaultValues={{
+      testRange: {
+        min: 15,
+        max: 150,
+      },
+    }}
+  >
+    {api => (
+      <>
+        <FormLabel>Base price / package:</FormLabel>
+        <Box mb={15}>
+          <Row>
+            <Col col={6}>
+              <FormInput type="number" name="testRange.min" />
+            </Col>
+            <Col col={6}>
+              <FormInput type="number" name="testRange.max" />
+            </Col>
+          </Row>
+        </Box>
+        <FormRange
+          min={0}
+          max={200}
+          defaultValue={[api.getValue('testRange.min'), api.getValue('testRange.max')]}
+          value={[api.getValue('testRange.min'), api.getValue('testRange.max')]}
+          step={1}
+          onChange={value => {
+            api.setValue('testRange.min', value[0]);
+            api.setValue('testRange.max', value[1]);
+          }}
+        />
+        <Button type="submit">Submit</Button>
+      </>
+    )}
+  </Form>
+</Preview>
+
+# Range props
+<Props of={FormRange} />

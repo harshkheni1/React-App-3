@@ -1,0 +1,40 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Button, Page, PageError } from '../../';
+import * as stories from './page.stories';
+
+<Meta title="Core/Page" component={Page} />
+
+### Basic Page
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+    <Story name="Error">{stories.Error()}</Story>
+</Preview>
+
+<Preview>
+  <PageError
+    code={404}
+    title="Page Not Found!"
+    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    img="https://placehold.it/1000x1000"
+    link={
+      <Button href="/" variant="solid" color="primaryDark" as="a" fullWidth>Go to the homepage</Button>
+    }
+  />
+</Preview>
+
+### Page Attributes
+
+```
+interface PageStaticProps {
+  Error?: FC<PageErrorProps> & WithStyle;
+}
+```
+
+### Page Props
+
+<Props of={Page} />
+
+### PageError Props(Page.Error)
+
+<Props of={PageError} />

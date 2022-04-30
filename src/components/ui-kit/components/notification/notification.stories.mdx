@@ -1,0 +1,36 @@
+import { Notification, NotificationList, Box } from '../../';
+import { NotificationDefault, itemsDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './notification.stories';
+import * as storiesList from './notification-list.stories';
+
+<Meta title="Core/Notification" component={Notification} />
+
+### Basic Notification
+
+<Preview withToolbar>
+    <Story name="Item">{stories.Basic(NotificationDefault)}</Story>
+</Preview>
+
+### NotificationList
+
+<Preview>
+  <Story name="List" height={200}>
+    {storiesList.Basic(itemsDefault)}
+  </Story>
+</Preview>
+
+### Notification types
+
+<Preview>
+  <Notification {...NotificationDefault} type="success" />
+  <Notification {...NotificationDefault} type="error" />
+</Preview>
+
+### Props Item (NotificationProps)
+
+<Props of={Notification} />
+
+### Props List
+
+<Props of={NotificationList} />

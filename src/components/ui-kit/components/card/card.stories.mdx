@@ -1,0 +1,93 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Row, Col, Card, Box, Icon, IconArray, Img, Text, Tag } from '../../';
+import * as stories from './card.stories';
+
+<Meta title="Core/Card" component={Card} />
+
+### Basic Card
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Basic Card Layout
+<Preview>
+    <Row>
+      <Col col={3}>
+        <Card mb={15} as="a">
+          <Img src="https://placehold.it/600x400" fullWidth />
+          <Card.Body bg="secondaryLight">
+            <Box clearfix>
+              <Text float="left" m={[0]} color="gray800">
+                <b>Bakery</b>
+              </Text>
+              <Text float="right" m={[0]} color="gray500">
+                145
+              </Text>
+            </Box>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
+</Preview>
+
+### Basic with Footer Card Layout
+<Preview>
+    <Row>
+      <Col col={3}>
+        <Card as="a">
+          <Img src="https://placehold.it/600x400" fullWidth>
+            <Tag color="primary" position={[8, 'auto', 'auto', 0]}>
+              Featured
+            </Tag>
+            <Tag color="secondary" position={['auto', 8, 8]}>
+              DJ
+            </Tag>
+          </Img>
+          <Card.Body bg="secondaryLight">
+            <Text
+              measure="xxs"
+              color="gray500"
+              letterSpacing={1.65}
+              m={[0, 0, 10]}
+              uppercase
+            >
+              <b>Nationwide · $$$</b>
+            </Text>
+            <Text
+              measure="md"
+              color="primaryDark"
+              m={[0]}
+            >
+              <b>Electro & House by Corey Murray</b>
+            </Text>
+          </Card.Body>
+          <Card.Footer
+            bg="secondaryLight"
+            borderColor="secondary"
+          >
+            <Text
+              measure="sm"
+              color="gray800"
+              m={[0]}
+            >
+              <Icon name="map-marker" measure={18} mr={5} />
+              Juneau, AK
+            </Text>
+          </Card.Footer>
+        </Card>
+      </Col>
+    </Row>
+</Preview>
+
+### Props
+<Props of={Card} />
+
+### Attributes Card
+```
+export interface CardStaticProps {
+  Header?: FC<CardElementProps> & WithStyle;
+  Body?: FC<CardElementProps> & WithStyle;
+  Footer?: FC<CardElementProps & CardFooterProps> & WithStyle;
+}
+```

@@ -1,0 +1,18 @@
+import { Progress } from '../../';
+import { ProgressDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './progress.stories';
+
+<Meta title="Core/Progress" component={Progress} />
+
+# Progress
+
+### Basic Progress
+
+<Preview withToolbar>
+    <Story name="Item">{stories.Basic(ProgressDefault)}</Story>
+</Preview>
+
+### Props Item
+
+<Props of={Progress} />

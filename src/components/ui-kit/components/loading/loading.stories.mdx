@@ -1,0 +1,26 @@
+import { Loading } from '../../';
+import { LoadingDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './loading.stories';
+
+<Meta title="Core/Loading" component={Loading} />
+
+# Loading
+
+### Loading Logo
+
+<Preview withToolbar>
+    <Story name="Loading Logo" height={300}>{stories.Basic(LoadingDefault)}</Story>
+</Preview>
+
+### Loading Spinner
+
+<Preview>
+  <Story name="Loading Spinner" height={300}>
+    <Loading type="spinner" />
+  </Story>
+</Preview>
+
+### Props Item
+
+<Props of={Loading} />

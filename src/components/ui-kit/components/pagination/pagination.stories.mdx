@@ -1,0 +1,13 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Pagination } from '../../';
+import * as stories from './pagination.stories';
+
+<Meta title="Core/Pagination" component={Pagination} />
+
+# Heading
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Props
+<Props of={Pagination} />

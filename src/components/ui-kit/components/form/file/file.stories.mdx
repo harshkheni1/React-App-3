@@ -1,0 +1,242 @@
+import { Form } from 'react-uforms';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormFileField, FormFile, Row, Col, Box } from '../../../';
+import * as stories from './file.stories';
+
+<Meta title="Form/File" />
+
+# File
+<Preview withToolbar>
+  <Story name="Basic">{stories.File()}</Story>
+</Preview>
+
+### Form File
+<Preview>
+  <Form>
+    <Row>
+      <Col col={6}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="secondaryLight"
+          buttonTitle="browse file(s)"
+          />
+      </Col>
+      <Col col={6}>
+        <FormFile
+          accept="image/*"
+          disabled={true}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="secondaryLight"
+          buttonTitle="disabled"
+          />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Form File Style
+<Preview>
+  <Form>
+    <Row>
+      <Col col={4}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="secondaryLight"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="primary"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="primaryDark"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="gray500"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="gray700"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFile
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="gray800"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Form File Field
+<Preview>
+  <Form>
+    <Row>
+      <Col col={6}>
+        <FormFileField
+          label="Form File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="secondaryLight"
+          buttonTitle="browse file(s)"
+          />
+      </Col>
+      <Col col={6}>
+        <FormFileField
+          label="Form File Field Label Disabled"
+          accept="image/*"
+          disabled={true}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="secondaryLight"
+          buttonTitle="disabled"
+          />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Form File Field Style
+<Preview>
+  <Form>
+    <Row>
+      <Col col={4}>
+        <FormFileField
+          label="File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="secondaryLight"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFileField
+          label="File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="primary"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFileField
+          label="File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="primaryDark"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFileField
+          label="File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="gray500"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFileField
+          label="File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="gray700"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+      <Col col={4}>
+        <FormFileField
+          label="File Field Label"
+          accept="image/*"
+          disabled={false}
+          name="input"
+          placeholder="Enter file"
+          required={false}
+          buttonStyle="gray800"
+          buttonTitle="browse"
+          />
+          <Box mb={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+# File props
+<Props of={FormFile} />

@@ -1,0 +1,75 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { StepEditor, StepEditorItem } from '../../';
+import * as stories from './step-editor.stories';
+
+<Meta title="Core/Step Editor" component={StepEditor} />
+
+# StepEditor
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+# StepEditor variant
+
+<Preview>
+    <StepEditor mb={20} title="Appointment details:">
+      <StepEditor.Item title="Bridal Appointment" counter={1}>
+        <Text m={[0]} measure="sm" fontWeight="bold">
+          Bridal Appointment
+        </Text>
+      </StepEditor.Item>
+      <StepEditor.Item title="First Bridal Appointment" counter={2}>
+        <Text m={[0]} fontWeight="bold" measure="sm">
+          First Bridal Appointment:{' '}
+          <Text as="span" fontWeight="normal">
+            90 Min
+          </Text>
+        </Text>
+      </StepEditor.Item>
+      <StepEditor.Item title="2201 Cottman Avenue" counter={3} current disabled>
+        <Text m={[0, 0, 8]} fontWeight="bold" measure="sm">
+          2201 Cottman Avenue
+        </Text>
+        <Text m={[0, 0, 8]} fontWeight="bold" measure="sm" color="primaryDark">
+          8.65 mi
+        </Text>
+        <Text m={[0, 0, 8]} measure="sm">
+          Alderwood Parkway Plaza II
+          <br />
+          Lynnwood, WA 98036
+        </Text>
+        <A href="tel:215-744-9651" measure="sm">
+          <Icon name="phone" measure={18} mr={10} />
+          215-744-9651
+        </A>
+        <br />
+        <br />
+        <A href="tel:38201" measure="sm">
+          <Icon name="post" measure={18} mr={10} />
+          38201
+        </A>
+      </StepEditor.Item>
+      <StepEditor.Item title="May 25, 2020; 9:30 am" counter={4} disabled>
+        <Row justifyContent="between">
+          <Col col={8}>
+            <Text fontWeight="bold" m={[0]} measure="sm">
+              May 25, 2020
+            </Text>
+          </Col>
+          <Col col={4}>
+            <Text fontWeight="bold" m={[0]} measure="sm">
+              9:30 am
+            </Text>
+          </Col>
+        </Row>
+      </StepEditor.Item>
+    </StepEditor>
+</Preview>
+
+# Editor props
+
+<Props of={StepEditor} />
+
+# Item props
+
+<Props of={StepEditorItem} />

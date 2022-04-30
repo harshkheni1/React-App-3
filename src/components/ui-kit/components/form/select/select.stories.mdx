@@ -1,0 +1,462 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Form } from 'react-uforms';
+import { FormSelect, FormSelectCreatable, FormSelectField, FormSelectCreatableField, Row, Col, Box  } from '../../../';
+import * as stories from './select.stories';
+
+<Meta title="Form/Select" />
+
+# Basic / Basic Field / Location
+<Preview>
+    <Story name="Basic">{stories.SelectBasic()}</Story>
+    <Story name="Location">{stories.SelectLocation()}</Story>
+    <Story name="Basic Field">{stories.SelectBasicField()}</Story>
+</Preview>
+
+### Basic / Basic Field
+<Preview>
+    <Row>
+      <Col col={6}>
+        <Form>
+          <FormSelect
+            isClearable={false}
+            isMulti={false}
+            name="testSelect0"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select default"
+            required
+          />
+          <Box mb={25} />
+          <FormSelect
+            isClearable={true}
+            isMulti={false}
+            name="testSelect1"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelect
+            isClearable
+            isMulti
+            name="testSelect2"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select isMulti isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelect
+            location
+            name="testSelect3"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select location"
+            required
+          />
+          <Box mb={25} />
+          <FormSelect
+            disabled
+            isMulti
+            name="testSelect4"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select disabled"
+            required
+          />
+          <Box mb={25} />
+        </Form>
+      </Col>
+      <Col col={6}>
+        <Form>
+          <FormSelectField
+            label="Select default"
+            isClearable={false}
+            isMulti={false}
+            name="testSelect0"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select default"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectField
+            label="Select isClearable"
+            isClearable={true}
+            isMulti={false}
+            name="testSelect1"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectField
+            label="Select isMulti isClearable"
+            isClearable
+            isMulti
+            name="testSelect2"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select isMulti isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectField
+            location
+            label="Select location"
+            name="testSelect3"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select location"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectField
+            label="Select disabled"
+            disabled
+            isMulti
+            name="testSelect4"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Select disabled"
+            required
+          />
+          <Box mb={25} />
+        </Form>
+      </Col>
+    </Row>
+</Preview>
+
+### FormSelect props
+<Props of={FormSelect} />
+
+### FormSelectField props
+<Props of={FormSelectField} />
+
+# Creatable / Creatable Field
+<Preview>
+   <Story name="Creatable">{stories.SelectCreatable()}</Story>
+   <Story name="Creatable Field">{stories.SelectCreatableField()}</Story>
+</Preview>
+
+### Creatable / Creatable Field
+<Preview>
+    <Row>
+      <Col col={6}>
+        <Form>
+          <FormSelectCreatable
+            isClearable={false}
+            isMulti={false}
+            name="testSelect0"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select default"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectCreatable
+            isClearable={true}
+            isMulti={false}
+            name="testSelect1"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectCreatable
+            isClearable
+            isMulti
+            name="testSelect2"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select isMulti isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectCreatable
+            disabled
+            isMulti
+            name="testSelect2"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select disabled"
+            required
+          />
+          <Box mb={25} />
+        </Form>
+      </Col>
+      <Col col={6}>
+        <Form>
+          <FormSelectCreatableField
+            label="Creatable Select default"
+            isClearable={false}
+            isMulti={false}
+            name="testSelect0"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select default"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectCreatableField
+            label="Creatable Select isClearable"
+            isClearable={true}
+            isMulti={false}
+            name="testSelect1"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectCreatableField
+            label="Creatable Select isMulti isClearable"
+            isClearable
+            isMulti
+            name="testSelect2"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select isMulti isClearable"
+            required
+          />
+          <Box mb={25} />
+          <FormSelectCreatableField
+            label="Creatable Select disabled"
+            disabled
+            isMulti
+            name="testSelect2"
+            options={[
+              {
+                label: 'test 1',
+                value: 'testSelectVal1'
+              },
+              {
+                label: 'test 2',
+                value: 'testSelectVal2'
+              },
+              {
+                label: 'test 3',
+                value: 'testSelectVal3'
+              }
+            ]}
+            placeholder="Creatable Select disabled"
+            required
+          />
+          <Box mb={25} />
+        </Form>
+      </Col>
+    </Row>
+</Preview>
+
+### FormSelectCreatable props
+<Props of={FormSelectCreatable} />
+
+### FormSelectCreatableField props
+<Props of={FormSelectCreatableField} />

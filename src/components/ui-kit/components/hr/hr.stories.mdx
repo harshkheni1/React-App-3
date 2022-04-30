@@ -1,0 +1,96 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Hr, Row, Col  } from '../../';
+import { HrDefault } from './const.ts';
+import * as stories from './hr.stories';
+
+<Meta title="Core/Hr" component={Hr} />
+
+# Hr
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(HrDefault)}</Story>
+</Preview>
+
+# Hr Examples
+<Preview>
+  <Row>
+    <Col col={6}>
+      primary
+      <Hr mb={25} />
+    </Col>
+    <Col col={6}>
+      primaryDark
+      <Hr mb={25} color="primaryDark" />
+    </Col>
+    <Col col={6}>
+      secondaryLight
+      <Hr mb={25} color="secondaryLight" />
+    </Col>
+    <Col col={6}>
+      gray500
+      <Hr mb={25} color="gray500" />
+    </Col>
+    <Col col={6}>
+      gray700
+      <Hr mb={25} color="gray700" />
+    </Col>
+    <Col col={6}>
+      gray800
+      <Hr mb={25} color="gray800" />
+    </Col>
+    <Col col={6}>
+      black
+      <Hr mb={25} color="black" />
+    </Col>
+    <Col col={6}>
+      transparent
+      <Hr mb={25} color="transparent" />
+    </Col>
+    <Col col={6}>
+      white
+      <Hr mb={25} color="white" />
+    </Col>
+    <Col col={6}>
+      gray100
+      <Hr mb={25} color="gray100" />
+    </Col>
+    <Col col={6}>
+      gray200
+      <Hr mb={25} color="gray200" />
+    </Col>
+    <Col col={6}>
+      gray300
+      <Hr mb={25} color="gray300" />
+    </Col>
+    <Col col={6}>
+      red
+      <Hr mb={25} color="red" />
+    </Col>
+    <Col col={6}>
+      yellow
+      <Hr mb={25} color="yellow" />
+    </Col>
+    <Col col={6}>
+      primaryLight
+      <Hr mb={25} color="primaryLight" />
+    </Col>
+    <Col col={6}>
+      secondary
+      <Hr mb={25} color="secondary" />
+    </Col>
+    <Col col={6}>
+      danger
+      <Hr mb={25} color="danger" />
+    </Col>
+    <Col col={6}>
+      success
+      <Hr mb={25} color="success" />
+    </Col>
+    <Col col={6}>
+      focus
+      <Hr mb={25} color="focus" />
+    </Col>
+  </Row>
+</Preview>
+
+### Props
+<Props of={Hr} />

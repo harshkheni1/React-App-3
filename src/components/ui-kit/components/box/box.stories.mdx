@@ -1,0 +1,187 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Box } from '../../';
+import * as stories from './box.stories';
+
+<Meta title="Core/Helpers" component={Box} />
+
+<Preview withToolbar>
+    <Story name="Spacing">{stories.SpacingHelper()}</Story>
+    <Story name="Float">{stories.FloatHelper()}</Story>
+    <Story name="Align">{stories.AlignHelper()}</Story>
+    <Story name="Display">{stories.DisplayHelper()}</Story>
+    <Story name="Color">{stories.ColorHelper()}</Story>
+    <Story name="Bg">{stories.BgHelper()}</Story>
+    <Story name="Clear Fix">{stories.ClearFixHelper()}</Story>
+    <Story name="Align Items">{stories.AlignItemsHelper()}</Story>
+    <Story name="Border">{stories.BorderHelper()}</Story>
+    <Story name="Full Width">{stories.FullWidthHelper()}</Story>
+    <Story name="Word Break">{stories.WordBreakHelper()}</Story>
+</Preview>
+
+### Box Component
+
+You can wrap your other components into Box component for styling them
+
+### Spacing
+```
+we can make static and responsive spacings examples:
+static:
+<Box mt={20} pb={30}>test</Box>
+responsive:
+<Box mt={{ xs: 20, md: 30 }} pb={{ xs: 20, md: 30 }}>test</Box>
+```
+
+<Preview>
+    <Box bg="primary" p={[10, 20, 30, 40]} m={[10, 20, 30, 40]}>Margin and padding static</Box>
+    <Box
+      bg="primary"
+      p={{ xs: [10, 20, 30, 40], sm: [12, 22, 32, 42], md: [14, 24, 34, 44], lg: [16, 26, 36, 46], xl: [18, 28, 38, 48] }}
+      m={{ xs: [10, 20, 30, 40], sm: [12, 22, 32, 42], md: [14, 24, 34, 44], lg: [16, 26, 36, 46], xl: [18, 28, 38, 48] }}
+    >
+      Margin and padding responsive
+    </Box>
+</Preview>
+
+### Display
+```
+we can make static and responsive spacings examples:
+static:
+<Box bg="primary" display="block" mb={20}>Display static</Box>
+responsive:
+<Box bg="primary" display={{ xs: 'flex', sm: 'block', md: 'none', md: 'inline-block', lg: 'inline' }}>
+  Display responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" display="block" mb={20}>Display static</Box>
+    <br />
+    <Box
+      bg="primary"
+      display={{ xs: 'flex', sm: 'block', md: 'none', md: 'inline-block', lg: 'inline' }}
+    >
+      Display responsive
+    </Box>
+</Preview>
+
+### Align
+```
+we can make static and responsive spacings examples:
+static:
+<Box bg="primary" align="center" mb={20}>Align static</Box>
+responsive:
+<Box bg="primary" align={{ xs: 'right', sm: 'justify', md: 'left', md: 'center' }}>
+  Align responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" align="center" mb={20}>Align static</Box>
+    <br />
+    <Box
+      bg="primary"
+      align={{ xs: 'right', sm: 'justify', md: 'left', md: 'center' }}
+    >
+      Align responsive
+    </Box>
+</Preview>
+
+
+### Float
+```
+we can make static and responsive spacings examples:
+static:
+<Box bg="primary" float="left" mb={20}>Float static</Box>
+responsive:
+<Box bg="primary" float={{ xs: 'right', md: 'left', md: 'none' }}>
+  Float responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" float="left" mb={20}>Float static</Box>
+    <br />
+    <Box bg="primary" float={{ xs: 'right', md: 'left', md: 'none' }}>
+      Float responsive
+    </Box>
+</Preview>
+
+### Bg
+```
+we can make static and responsive spacings examples:
+static:
+<Box bg="primary" mb={20}>Bg static</Box>
+responsive:
+<Box bg={{ xs: 'primary', sm: 'primary', md: 'success', lg: 'primaryLight' }}>
+  Bg responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" mb={20}>Bg static</Box>
+    <br />
+    <Box bg={{ xs: 'primary', sm: 'primary', md: 'success', lg: 'primaryLight' }}>
+      Bg responsive
+    </Box>
+</Preview>
+
+### fontWeight
+```
+we can make static and responsive spacings examples:
+static:
+<Box bg="primary" fontWeight="normal" mb={20}>fontWeight static</Box>
+responsive:
+<Box bg="primary" fontWeight={{ xs: 'thin', sm: 'light', md: 'normal', lg: 'medium', xl: 'bold' }}>
+  fontWeight responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" fontWeight="normal" mb={20}>fontWeight static</Box>
+    <br />
+    <Box bg="primary" fontWeight={{ xs: 'thin', sm: 'light', md: 'normal', lg: 'medium', xl: 'bold' }}>
+      fontWeight responsive
+    </Box>
+</Preview>
+
+### Border
+```
+we can make static and responsive spacings examples:
+static:
+<Box bg="primary" border="1px solid black" mb={20}>Border static</Box>
+responsive:
+<Box bg="primary" border={{ xs: '1px solid black', sm: '2px dotted red', md: '3px solid blue', lg: '3px dashed blue' }}>
+  Border responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" border="1px solid black" mb={20}>Border static</Box>
+    <br />
+    <Box bg="primary" border={{ xs: '1px solid black', sm: '2px dotted #432a2a', md: '3px solid blue', lg: '3px dashed blue' }}>
+      Border responsive
+    </Box>
+</Preview>
+
+### wordBreak
+```
+we can make static and responsive wordBreak examples:
+static:
+<Box bg="primary" wordBreak="normal" mb={20}>wordBreak static</Box>
+responsive:
+<Box bg="primary" wordBreak={{ xs: 'normal', sm: 'break-all', md: 'normal', lg: 'keep-all'}}>
+  wordBreak responsive
+</Box>
+```
+
+<Preview>
+    <Box bg="primary" fontWeight="normal" mb={20}>fontWeight static</Box>
+    <br />
+    <Box bg="primary" fontWeight={{ xs: 'thin', sm: 'light', md: 'normal', lg: 'medium', xl: 'bold' }}>
+      fontWeight responsive
+    </Box>
+</Preview>
+
+# Box props
+
+<Props of={Box} />

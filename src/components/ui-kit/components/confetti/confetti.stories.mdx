@@ -1,0 +1,24 @@
+import { Confetti } from '../../';
+import { ConfettiDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './confetti.stories';
+
+<Meta title="Core/Confetti" component={Confetti} />
+
+# Confetti
+
+### Basic Confetti
+
+<Preview withToolbar>
+    <Story name="Item">{stories.Basic(ConfettiDefault)}</Story>
+</Preview>
+
+### Default
+
+<Preview>
+    <Confetti isActive={true} duration={30} interval={5} />
+</Preview>
+
+### Props Item
+
+<Props of={Confetti} />

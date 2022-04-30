@@ -1,0 +1,35 @@
+import { Tag } from '../../';
+import { TagDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './tag.stories';
+
+<Meta title="Core/Tag" component={Tag} />
+
+# Tag
+
+### Basic Tag
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(TagDefault)}</Story>
+</Preview>
+
+### Colors
+
+<Preview>
+    <Tag color="secondary">Test secondary</Tag>
+    <Tag color="primary">Test primary</Tag>
+    <Tag color="primaryLight">Test primaryLight</Tag>
+    <Tag color="success">Test success</Tag>
+</Preview>
+
+### Sizes
+
+<Preview>
+    <Tag measure="md">Test</Tag>
+</Preview>
+
+### Props
+
+<Props of={Tag} />
+
+```type TagPositionType = number | 'auto';```

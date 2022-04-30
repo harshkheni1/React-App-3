@@ -1,0 +1,122 @@
+import { Heading, Row, Col, Box } from '../../';
+import { HeadingDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './heading.stories';
+
+<Meta title="Typography/Heading" component={Heading} />
+
+# Heading
+
+### Basic Heading
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(HeadingDefault)}</Story>
+</Preview>
+
+### Colors
+
+<Preview>
+  <Row>
+    <Col col={6}>
+      <Heading color="red">red&nbsp;</Heading>
+      <Heading color="black">black&nbsp;</Heading>
+      <Heading color="danger">danger&nbsp;</Heading>
+      <Heading color="primary">primary&nbsp;</Heading>
+      <Heading color="secondaryLight">secondary light&nbsp;</Heading>
+      <Heading color="success">success&nbsp;</Heading>
+    </Col>
+    <Col col={6}>
+      <Box bg="black"><Heading color="white">white&nbsp;</Heading></Box>
+      <Heading color="gray200">gray200&nbsp;</Heading>
+      <Heading color="gray300">gray300&nbsp;</Heading>
+      <Heading color="gray500">gray500&nbsp;</Heading>
+      <Heading color="gray700">gray700&nbsp;</Heading>
+      <Heading color="gray800">gray800&nbsp;</Heading>
+    </Col>
+  </Row>
+</Preview>
+
+### Sizes
+```
+Priority of font-size:
+1) fontSize
+2) measure
+3) if no measure and fontSize, then it will be get from as tag. as=measure
+```
+<Preview>
+  <Row>
+    <Col col={6}>
+      <Heading>H1 Heading</Heading>
+      <Heading as="h2">H2 Heading</Heading>
+      <Heading as="h3">H3 Heading</Heading>
+      <Heading as="h4">H4 Heading</Heading>
+    </Col>
+    <Col col={6}>
+      <Heading as="h5">H5 Heading</Heading>
+      <Heading as="h6">H6 Heading</Heading>
+      <Heading measure={{ xs: 'h5', sm: 'h4', md: 'h3', lg: 'h2', xl: 'h1' }} as="h6">Media measure</Heading>
+      <Heading fontSize={{ xs: 16, sm: 20, md: 30, lg: 40, xl: 50 }} as="h6">Media fontSize</Heading>
+    </Col>
+  </Row>
+</Preview>
+
+### Font Weight
+
+<Preview>
+  <Row>
+    <Col col={6}>
+      <Heading fontWeight="thin">thin Heading</Heading>
+      <Heading fontWeight="light">light Heading</Heading>
+      <Heading fontWeight="normal">normal Heading</Heading>
+      <Heading fontWeight="medium">medium Heading</Heading>
+    </Col>
+    <Col col={6}>
+      <Heading fontWeight="medium">medium Heading</Heading>
+      <Heading fontWeight="bold">bold Heading</Heading>
+      <Heading fontWeight="xbold">xbold Heading</Heading>
+      <Heading fontWeight="black">black Heading</Heading>
+    </Col>
+  </Row>
+</Preview>
+
+### Align
+
+<Preview>
+  <Row>
+    <Col col={12}>
+      <Heading align="left">align left</Heading>
+      <Heading align="center">align center</Heading>
+      <Heading align="right">align right</Heading>
+      <Heading align="justify">align justify</Heading>
+    </Col>
+  </Row>
+</Preview>
+
+
+### Font Family
+
+<Preview>
+  <Row>
+    <Col col={12}>
+      <Heading fontFamily="primary">Font Family primary</Heading>
+      <Heading fontFamily="secondary">Font Family secondary</Heading>
+    </Col>
+  </Row>
+</Preview>
+
+### Other props
+
+<Preview>
+  <Row>
+    <Col col={12}>
+      <Heading lineHeight={80}>lineHeight 80px</Heading>
+      <Heading letterSpacing={20}>letterSpacing 20px</Heading>
+      <Heading uppercase>uppercase text</Heading>
+      <Heading lineThrough>lineThrough text</Heading>
+    </Col>
+  </Row>
+</Preview>
+
+### Props
+
+<Props of={Heading} />

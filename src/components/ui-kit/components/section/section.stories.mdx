@@ -1,0 +1,48 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Section } from '../../';
+import * as stories from './section.stories';
+
+<Meta title="Core/Section" component={Section} />
+
+# Section
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+```
+<Section expanded collapsable>
+  <Section.Header>
+    <Section.Title>about vendor</Section.Title>
+    <Section.Action>
+      <Button color="primaryDark" measure="md" type="button" uppercase variant="flat">
+        <Icon measure={18} name="edit" mr={10} />
+        Edit
+      </Button>
+    </Section.Action>
+  </Section.Header>
+  <Section.Body>
+    <Text>
+      Wedding Sedan Seattle is the one stop ground transportation for all your Weddings, Special Events, needs.
+      Wedding Sedan Seattle is premier Seattle wedding limo service provider in Seattle Washington, Our Seattle
+      wedding limousine service could provide you a reliable wedding transportation. We have latest models of
+      Sedans, SUV, Van, all exotic limos available in Seattle and beyond, such as Hummer Stretch Limo, Cadillac
+      Escalade Limo, Chrysler Limo, Lincoln Stretch limousine and more.
+    </Text>
+  </Section.Body>
+</Section>
+```
+
+# Section Attributes
+
+```
+interface SectionStaticProps {
+  Header?: React.FC<SectionHeaderProps> & WithStyle;
+  Title?: React.FC<SectionTitleProps> & WithStyle;
+  Action?: React.FC<SectionActionProps> & WithStyle;
+  Body?: React.FC<SectionBodyProps> & WithStyle;
+}
+```
+
+# Section props
+<Props of={Section} />

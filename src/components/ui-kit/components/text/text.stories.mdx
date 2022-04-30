@@ -1,0 +1,65 @@
+import { Text } from '../../';
+import { TextDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './text.stories';
+
+<Meta title="Typography/Text" component={Text} />
+
+# Text
+
+### Basic Text
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(TextDefault)}</Story>
+</Preview>
+
+### Colors
+
+<Preview>
+    <Text color="red">red&nbsp;</Text>
+    <Text color="black">black&nbsp;</Text>
+    <Text color="danger">danger&nbsp;</Text>
+    <Text color="primary">primary&nbsp;</Text>
+    <Text color="secondaryLight">secondary light&nbsp;</Text>
+    <Text color="success">success&nbsp;</Text>
+    <Text color="white">white&nbsp;</Text>
+    <Text color="gray200">gray200&nbsp;</Text>
+    <Text color="gray300">gray300&nbsp;</Text>
+    <Text color="gray500">gray500&nbsp;</Text>
+    <Text color="gray700">gray700&nbsp;</Text>
+    <Text color="gray800">gray800&nbsp;</Text>
+</Preview>
+
+### Sizes
+
+<Preview>
+    <Text measure="xs">xs</Text>
+    <Text measure="sm">sm</Text>
+    <Text measure="md">md</Text>
+    <Text measure="lg">lg</Text>
+    <Text measure="xxs">xxs</Text>
+    <Text measure={{ xs: 'xs', sm: 'sm', md: 'md', lg: 'lg' }}>media</Text>
+</Preview>
+
+### Tags
+
+<Preview>
+    <Text as="p">p</Text>
+    <Text as="span">span</Text>
+    <Text as="div">div</Text>
+    <Text as="b">b</Text>
+    <Text as="strong">strong</Text>
+    <Text as="em">em</Text>
+</Preview>
+
+### Other
+
+<Preview>
+    <Text uppercase>uppercase</Text>
+    <Text capitalize>capitalize</Text>
+    <Text lineThrough>lineThrough</Text>
+</Preview>
+
+### Props
+
+<Props of={Text} />

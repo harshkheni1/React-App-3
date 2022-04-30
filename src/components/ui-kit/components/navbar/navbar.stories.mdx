@@ -1,0 +1,33 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Row, Col, Navbar } from '../../';
+import * as stories from './navbar.stories';
+
+<Meta title="Core/Navbar" component={Navbar} />
+
+### Basic Link
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Navbar Attributes
+
+```
+interface NavbarStaticProps {
+  Brand?: FC<NavbarBrandProps> & WithStyle;
+  Collapse?: FC<NavbarCollapseProps> & WithStyle;
+  Toggle?: FC<NavbarToggleProps> & WithStyle;
+}
+```
+
+### Props Navbar.Brand
+
+<Props of={Navbar.Brand} />
+
+### Props Navbar.Collapse
+
+<Props of={Navbar.Collapse} />
+
+### Props Navbar.Toggle
+
+<Props of={Navbar.Toggle} />

@@ -1,0 +1,39 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Panel } from '../../';
+import * as stories from './panel.stories';
+
+<Meta title="Core/Panel" />
+
+<Preview withToolbar>
+  <Story name="PanelPricing">{stories.PanelPricing()}</Story>
+</Preview>
+
+```
+<Panel as="label">
+  <Panel.Header>
+    <Panel.Title>Nationwide</Panel.Title>
+    <FormRadioField name="pricing" value="nationwide" as="span" label="" />
+  </Panel.Header>
+  <Panel.Body>
+    ...
+  </Panel.Body>
+  <Panel.Footer>
+    ...
+  </Panel.Footer>
+</Panel>
+```
+
+# Panel Attributes
+
+```
+interface PanelStaticProps {
+  Header?: FC<PanelElementProps> & WithStyle;
+  Title?: FC<PanelElementProps> & WithStyle;
+  Body?: FC<PanelElementProps> & WithStyle;
+  Footer?: FC<PanelElementProps> & WithStyle;
+}
+```
+
+# Panel props
+
+<Props of={Panel} />

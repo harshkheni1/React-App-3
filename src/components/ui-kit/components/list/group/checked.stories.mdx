@@ -1,0 +1,23 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { ListGroupChecked } from '../../../';
+import * as stories from './checked.stories';
+
+<Meta title="Core/List/Checked" />
+
+<Preview withToolbar>
+  <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+# List props
+
+```
+interface ListGroupCheckedStaticProps {
+  Item: FC<ListGroupCheckedItemProps> & WithStyle;
+}
+```
+
+<Props of={ListGroupChecked} />
+
+# Item props
+
+<Props of={ListGroupChecked.Item} />

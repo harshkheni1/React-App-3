@@ -1,0 +1,69 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Row, Col, Carousel, Icon, Img, Box } from '../../';
+import * as stories from './carousel.stories';
+
+<Meta title="Core/Carousel" component={Carousel} />
+
+### Basic Carousel
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Basic Carousel Image
+
+<Preview>
+    <Carousel.Img>
+      <Carousel.Control onClick={() => console.log('prev')} position="left" disabled>
+        <Icon name="angle-left" measure={14} color="gray800" />
+      </Carousel.Control>
+      <Img src="https://placehold.it/1200x800" fit="cover" height="400" fullWidth placeholder />
+      <Carousel.Control onClick={() => console.log('next')} position="right">
+        <Icon name="angle-right" measure={14} color="gray800" />
+      </Carousel.Control>
+    </Carousel.Img>
+</Preview>
+
+### Basic Carousel Thumb
+
+<Preview>
+  <Row>
+    <Col xs={7} sm={7} lg={4}>
+      <Carousel.Thumb mb={16} onClick={() => console.log('click thumb')} active>
+        <Img src="https://placehold.it/440x440" fit="cover" height="100" placeholder fullWidth />
+      </Carousel.Thumb>
+    </Col>
+    <Col xs={7} sm={7} lg={4}>
+      <Carousel.Thumb mb={16}>
+        <Img src="https://placehold.it/440x440" fit="cover" height="100" placeholder fullWidth />
+      </Carousel.Thumb>
+    </Col>
+    <Col xs={7} sm={7} lg={4}>
+      <Carousel.Thumb mb={16}>
+        <Img src="https://placehold.it/440x440" fit="cover" height="100" placeholder fullWidth />
+      </Carousel.Thumb>
+    </Col>
+    <Col xs={7} sm={7} lg={4}>
+      <Carousel.Thumb mb={16}>
+        <Img src="https://placehold.it/440x440" fit="cover" height="100" placeholder fullWidth />
+      </Carousel.Thumb>
+    </Col>
+    <Col xs={7} sm={7} lg={4}>
+      <Carousel.Thumb mb={16}>
+        <Img src="https://placehold.it/440x440" fit="cover" height="100" placeholder fullWidth />
+      </Carousel.Thumb>
+    </Col>
+  </Row>
+</Preview>
+
+### Props
+<Props of={Carousel} />
+
+### Attributes Carousel
+```
+export interface CarouselStaticProps {
+  Img?: FC<CarouselImgProps> & WithStyle;
+  Control?: FC<CarouselControlProps> & WithStyle;
+  Thumb?: FC<CarouselThumbProps> & WithStyle;
+}
+```

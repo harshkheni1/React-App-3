@@ -1,0 +1,57 @@
+import { FormTextArea, Row, Col } from '../../../';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './textarea.stories';
+import { Form } from 'react-uforms';
+
+<Meta title="Form/Textarea" />
+
+# Textarea
+<Preview withToolbar>
+    <Story name="Basic">{stories.TextArea()}</Story>
+</Preview>
+
+# Textarea size
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+        <Col col={4}>
+          <FormTextArea measure="sm" name="size_sm" />
+        </Col>
+        <Col col={4}>
+          <FormTextArea measure="md" name="size_md" />
+        </Col>
+        <Col col={4}>
+          <FormTextArea measure="lg" name="size_lg" />
+        </Col>
+      </Row>
+  </Form>
+</Preview>
+
+# Textarea states
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}>
+    <Row>
+        <Col col={3}>
+          <FormTextArea disabled name="input_disabled" placeholder="Disabled" />
+        </Col>
+        <Col col={3}>
+          <FormTextArea className="is-success" name="input_success" placeholder="Success" />
+        </Col>
+        <Col col={3}>
+          <FormTextArea className="is-invalid" name="input_error" placeholder="Error" />
+        </Col>
+        <Col col={3}>
+          <FormTextArea clearable className="is-invalid" name="input_error" placeholder="Clearable" />
+        </Col>
+      </Row>
+  </Form>
+</Preview>
+
+# Textarea props
+<Props of={FormTextArea} />

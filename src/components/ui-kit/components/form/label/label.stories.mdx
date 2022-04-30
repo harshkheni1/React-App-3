@@ -1,0 +1,59 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { FormLabel, Row, Col, Box } from '../../../';
+import * as stories from './label.stories';
+
+<Meta title="Form/Label" component={FormLabel} />
+
+# Basic
+
+<Preview>
+    <Story name="Basic">{stories.FormLabelBasic()}</Story>
+</Preview>
+
+## FormLabel measure
+<Preview>
+    <FormLabel measure="xxs" required={true}>Measure XXS</FormLabel>
+    <FormLabel measure="xs" required={true}>Measure XS</FormLabel>
+    <FormLabel measure="sm" required={true}>Measure SM</FormLabel>
+    <FormLabel measure="md" required={true}>Measure MD</FormLabel>
+    <FormLabel measure="lg" required={true}>Measure LG</FormLabel>
+</Preview>
+
+## FormLabel AS
+<Preview>
+  <Row>
+    <Col col={3}>
+      <FormLabel mb={25}>FormLabel default</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="a">FormLabel as A</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="b">FormLabel as B</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="div">FormLabel as DIV</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="div">FormLabel as DIV</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="em">FormLabel as EM</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="label">FormLabel as LABEL</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="p" mt={0}>FormLabel as P</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="span">FormLabel as SPAN</FormLabel>
+    </Col>
+    <Col col={3}>
+      <FormLabel mb={25} as="strong">FormLabel as STRONG</FormLabel>
+    </Col>
+  </Row>
+</Preview>
+
+### Props
+<Props of={FormLabel} />

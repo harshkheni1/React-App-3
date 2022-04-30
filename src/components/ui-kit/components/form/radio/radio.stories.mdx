@@ -1,0 +1,137 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Form } from 'react-uforms';
+import { FormRadio, FormRadioField, FormRadioGroupField, FormRadioGroupItemField, Row, Col, Box } from '../../../';
+import * as stories from './radio.stories';
+
+<Meta title="Form/Radio" />
+
+<Preview withToolbar>
+  <Story name="Field Basic">{stories.RadioFieldBasic()}</Story>
+  <Story name="Field Block">{stories.RadioFieldBlock()}</Story>
+  <Story name="Field Group Field">{stories.RadioGroupFieldBasic()}</Story>
+</Preview>
+
+# FormRadioField / FormRadioField Block / FormRadioGroupField
+<Preview>
+    <Row>
+      <Col col={2}>
+        <Form
+          defaultValues={{
+            testRadio1: 'testRadioVal1',
+          }}
+        >
+          <Box mb={10}>
+            <FormRadioField
+              name="testRadio1"
+              label="Test radio"
+              disabled={false}
+              checked={true}
+              value="testRadioVal1"
+            />
+          </Box>
+          <Box mb={10}>
+            <FormRadioField
+              name="testRadio1"
+              label="Test radio"
+              disabled={false}
+              value="testRadioVal2"
+            />
+          </Box>
+        </Form>
+      </Col>
+      <Col col={2}>
+        <Form
+          defaultValues={{
+            testRadio1: 'testRadioVal1',
+          }}
+        >
+          <Box mb={10}>
+            <FormRadioField
+              name="testRadio1"
+              label="Test radio"
+              disabled={false}
+              checked={true}
+              value="testRadioVal1"
+              color="gray800"
+            />
+          </Box>
+          <Box mb={10}>
+            <FormRadioField
+              name="testRadio1"
+              label="Test radio"
+              disabled={false}
+              value="testRadioVal2"
+              color="gray800"
+            />
+          </Box>
+        </Form>
+      </Col>
+      <Col col={4}>
+        <Form
+          defaultValues={{
+            testRadio2: 'testRadioVal1',
+          }}
+        >
+          <Box mb={10} display="flex">
+            <FormRadioField
+              block
+              name="testRadio2"
+              label="Test radio"
+              disabled={false}
+              checked={true}
+              value="testRadioVal1"
+            />
+            <FormRadioField
+              block
+              name="testRadio2"
+              label="Test radio"
+              disabled={false}
+              value="testRadioVal2"
+              measure="xl"
+            />
+          </Box>
+        </Form>
+      </Col>
+      <Col col={4}>
+        <Form
+          defaultValues={{
+            testRadio: 'test1'
+          }}
+        >
+          <Box pb={15}>
+            <FormRadioGroupField
+              label="Test group"
+              name="testRadio"
+            >
+              <FormRadioGroupItemField
+                color="gray800"
+                label="Test 1"
+                mb={15}
+                value="test1"
+              />
+              <FormRadioGroupItemField
+                color="gray800"
+                label="Test 2"
+                mb={15}
+                value="test2"
+              />
+              <FormRadioGroupItemField
+                color="gray800"
+                label="Test 3"
+                mb={15}
+                value="test3"
+              />
+            </FormRadioGroupField>
+          </Box>
+        </Form>
+      </Col>
+    </Row>
+</Preview>
+
+# FormRadio props
+
+<Props of={FormRadio} />
+
+# FormRadioField props
+
+<Props of={FormRadioField} />

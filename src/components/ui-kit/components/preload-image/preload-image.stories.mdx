@@ -1,0 +1,18 @@
+import { PreloadImage } from '../../';
+import { PreloadDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './preload-image.stories';
+
+<Meta title="Core/PreloadImage" component={PreloadImage} />
+
+# PreloadImage
+
+### Basic PreloadImage
+
+<Preview withToolbar>
+    <Story name="Item">{stories.Basic(PreloadDefault)}</Story>
+</Preview>
+
+### Props Item
+
+<Props of={PreloadImage} />

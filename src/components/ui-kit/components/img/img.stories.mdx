@@ -1,0 +1,17 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Img } from '../../';
+import * as stories from './img.stories';
+
+<Meta title="Core/Img" component={Img} />
+
+# Img
+
+### Basic Img
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+    <Story name="Responsive">{stories.Responsive()}</Story>
+</Preview>
+
+### Props
+<Props of={Img} />

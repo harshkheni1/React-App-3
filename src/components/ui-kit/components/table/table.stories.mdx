@@ -1,0 +1,95 @@
+import { Table, TableRow, TableCell, TableEmpty } from '../../';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './table.stories';
+
+<Meta title="Core/Table" component={Table} />
+
+# Table
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+    <Story name="Empty">{stories.Empty()}</Story>
+    <Story name="File Listing">{stories.FileListing()}</Story>
+</Preview>
+
+### Cell type head
+
+<Preview>
+    <Table>
+      <Table.Row>
+        <Table.Cell type="head" name="toggle">
+          <FormCheckboxField onValue={false} offValue={false} name="all" />
+        </Table.Cell>
+        <Table.Cell type="head">vendor Name</Table.Cell>
+        <Table.Cell type="head">vendor category</Table.Cell>
+        <Table.Cell type="head">Listing</Table.Cell>
+        <Table.Cell type="head">payment</Table.Cell>
+        <Table.Cell type="head">Review</Table.Cell>
+        <Table.Cell type="head">type</Table.Cell>
+        <Table.Cell type="head">State</Table.Cell>
+        <Table.Cell type="head">city</Table.Cell>
+        <Table.Cell type="head" name="action" />
+      </Table.Row>
+    </Table>
+</Preview>
+
+### Cell type basic
+
+<Preview>
+    <Table>
+      <Table.Row>
+        <Table.Cell name="toggle">
+          <FormCheckboxField onValue={false} offValue={false} name="all" />
+        </Table.Cell>
+        <Table.Cell>vendor Name</Table.Cell>
+        <Table.Cell>vendor category</Table.Cell>
+        <Table.Cell>Listing</Table.Cell>
+        <Table.Cell>payment</Table.Cell>
+        <Table.Cell>Review</Table.Cell>
+        <Table.Cell>type</Table.Cell>
+        <Table.Cell>State</Table.Cell>
+        <Table.Cell>city</Table.Cell>
+        <Table.Cell name="action" />
+      </Table.Row>
+    </Table>
+</Preview>
+
+### Cell styles
+
+<Preview>
+    <Table>
+      <Table.Row>
+        <Table.Cell name="toggle">toggle<br />40px</Table.Cell>
+        <Table.Cell name="action">action<br />80px</Table.Cell>
+        <Table.Cell name="fileListingSection">fileListingSection<br />200px</Table.Cell>
+        <Table.Cell name="fileListingAction">fileListingAction<br />200px</Table.Cell>
+        <Table.Cell>simple<br />auto</Table.Cell>
+      </Table.Row>
+    </Table>
+</Preview>
+
+### Table Attributes
+
+```
+interface TableStaticProps {
+  Row?: FC<TableRowProps> & WithStyle;
+  Cell?: FC<TableCellProps> & WithStyle;
+  Empty?: FC<TableEmptyProps>;
+}
+```
+
+### Props Table
+
+<Props of={Table} />
+
+### Props Table.Row
+
+<Props of={Table.Row} />
+
+### Props Table.Cell
+
+<Props of={Table.Cell} />
+
+### Props Table.Empty
+
+<Props of={Table.Empty} />

@@ -1,0 +1,20 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Accordion, AccordionItem} from '../../';
+import * as stories from './card.stories';
+
+<Meta title="Core/Accordion" component={Accordion} />
+
+### Basic Accordion
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Basic Accordion Layout
+<Preview>
+    <Accordion>
+    <AccordionItem title={"What can JavaScript Do?"}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.
+    </AccordionItem>
+    </Accordion>
+</Preview>

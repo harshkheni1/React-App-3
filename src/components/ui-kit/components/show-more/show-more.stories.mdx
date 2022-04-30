@@ -1,0 +1,13 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { ShowMore, Text  } from '../../';
+import * as stories from './show-more.stories';
+
+<Meta title="Core/ShowMore" component={ShowMore} />
+
+# ShowMore
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Props
+<Props of={ShowMore} />

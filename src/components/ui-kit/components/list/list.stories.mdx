@@ -1,0 +1,29 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { List } from '../../';
+import * as stories from './list.stories';
+
+<Meta title="Core/List" />
+
+<Preview withToolbar>
+  <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Check">{stories.Check()}</Story>
+</Preview>
+
+# List Attributes
+
+```
+ListStaticProps {
+  Item: FC<ListItemProps> & WithStyle;
+}
+```
+
+# List props
+
+<Props of={List} />
+
+# List.Item props
+
+<Props of={List.Item} />

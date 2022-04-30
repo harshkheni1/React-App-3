@@ -1,0 +1,150 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { GridThemeProvider, Box, Container, Row, Col } from '../../'
+import * as stories from './grid.stories';
+
+<Meta title="Core/Grid" component={Container} />
+
+# Grid
+
+<Preview withToolbar>
+    <Story name="Grid">{stories.Basic()}</Story>
+</Preview>
+
+<Preview>
+    <Story name="Bootstrap grid">
+      <Container>
+        <Box bg="gray200" p={[10]}>
+          Container
+          <Row>
+            <Col col={12}><Box bg="red" p={[10]}>1/1</Box></Col>
+            <Col col={6}><Box bg="success" p={[10]}>1/2</Box></Col>
+            <Col col={4}><Box bg="primary" p={[10]}>1/3</Box></Col>
+            <Col col={2}><Box bg="white" p={[10]}>1/6</Box></Col>
+            <Col col={3}><Box bg="danger" p={[10]}>1/4</Box></Col>
+          </Row>
+        </Box>
+      </Container>
+    </Story>
+</Preview>
+
+
+```<GridThemeProvider gridTheme={{ gridColumns: 10 }}>```
+<Preview>
+    <Story name="gridColumns: 10">
+      <Container>
+        <Box bg="gray200" p={[10]}>
+          Container
+          <GridThemeProvider gridTheme={{ gridColumns: 10 }}>
+            <Row>
+              <Col col={1}><Box bg="red" p={[10]}>1 / 10</Box></Col>
+              <Col col={2}><Box bg="success" p={[10]}>2 / 10</Box></Col>
+              <Col col={2}><Box bg="primary" p={[10]}>2 / 10</Box></Col>
+              <Col col={2}><Box bg="white" p={[10]}>2 / 10</Box></Col>
+              <Col col={2}><Box bg="danger" p={[10]}>2 / 10</Box></Col>
+            </Row>
+          </GridThemeProvider>
+        </Box>
+      </Container>
+    </Story>
+</Preview>
+
+```<GridThemeProvider gridTheme={{ gridColumns: 5 }}>```
+<Preview>
+    <Story name="gridColumns: 5">
+      <Container>
+        <Box bg="gray200" p={[10]}>
+          Container
+          <GridThemeProvider gridTheme={{ gridColumns: 5 }}>
+            <Row>
+              <Col col={1}><Box bg="red" p={[10]}>1 / 5</Box></Col>
+              <Col col={1}><Box bg="success" p={[10]}>1 / 5</Box></Col>
+              <Col col={1}><Box bg="primary" p={[10]}>1 / 5</Box></Col>
+              <Col col={1}><Box bg="white" p={[10]}>1 / 5</Box></Col>
+              <Col col={1}><Box bg="danger" p={[10]}>1 / 5</Box></Col>
+            </Row>
+          </GridThemeProvider>
+        </Box>
+      </Container>
+    </Story>
+</Preview>
+
+<Preview>
+    <Story name="Container Fluid">
+      <Container fluid><Box bg="gray800" color="white" p={[10]}>Container fluid</Box></Container>
+    </Story>
+</Preview>
+
+### Container Props
+
+<Props of={Container} />
+
+### Row Props
+
+<Props of={Row} />
+
+### Col Props
+
+<Props of={Col} />
+
+### GridThemeProvider Props
+
+```
+const gridTheme = {
+  gridColumns: 24, // default 12
+  breakpoints: { // defaults below
+    xxl: 1440,
+    xl: 1200,
+    lg: 992,
+    md: 768,
+    sm: 576,
+    xs: 575,
+    // or you can use aliases
+    // veryGiant: 1440,
+    // giant: 1200,
+    // desktop: 992,
+    // tablet: 768,
+    // phone: 576,
+    // smaller: 575,
+  },
+  row: {
+    padding: 10, // default 15
+  },
+  col: {
+    padding: 5, // default 15
+  },
+  container: {
+    padding: 0, // default 15
+    maxWidth: { // defaults below
+      xxl: 1141,
+      xl: 1140,
+      lg: 960,
+      md: 720,
+      sm: 540,
+      xs: 540,
+      // or you can use aliases
+      // veryGiant: 1141,
+      // giant: 1140,
+      // desktop: 960,
+      // tablet: 720,
+      // phone: 540,
+      // smaller: 540,
+    },
+  },
+};
+
+<GridThemeProvider gridTheme={gridTheme}>
+  <Row>
+    <Col />...
+  </Row>
+</GridThemeProvider>
+
+<GridThemeProvider gridTheme={{ gridColumns: 5 }}>
+  <Row>
+    <Col col={1}><Box bg="red" p={[10]}>1 / 5</Box></Col>
+    <Col col={1}><Box bg="success" p={[10]}>1 / 5</Box></Col>
+    <Col col={1}><Box bg="primary" p={[10]}>1 / 5</Box></Col>
+    <Col col={1}><Box bg="white" p={[10]}>1 / 5</Box></Col>
+    <Col col={1}><Box bg="danger" p={[10]}>1 / 5</Box></Col>
+  </Row>
+</GridThemeProvider>
+```

@@ -1,0 +1,227 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Row, Col, A, Box } from '../../';
+import { ADefault } from './const';
+import * as stories from './link.stories';
+
+<Meta title="Core/Link" component={A} />
+
+# Link
+
+### Basic Link
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(ADefault)}</Story>
+</Preview>
+
+### Colors
+
+<Preview>
+  <div style={{ textAlign: 'center' }}>
+    <Row>
+      <Col col="3">
+        <A color="red">red</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="black">black</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="danger">danger</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="primary">primary</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="primaryDark">primaryDark</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="secondaryLight">secondaryLight</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="success">success</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <Box mb={25} bg="black">
+          <A color="white">white</A>
+        </Box>
+      </Col>
+      <Col col="3">
+        <A color="gray100">gray100</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="gray200">gray200</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="gray300">gray300</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="gray500">gray500</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="gray700">gray700</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="gray800">gray800</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="yellow">yellow</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="primaryLight">primaryLight</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="secondary">secondary</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A color="focus">focus</A>
+        <Box mb={25} />
+      </Col>
+    </Row>
+  </div>
+</Preview>
+
+### with hover
+
+<Preview>
+  <div style={{ textAlign: 'center' }}>
+    <Row>
+      <Col col="3">
+        <A hoverColor="red">red</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="black">black</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="danger">danger</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="primary">primary</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="primaryDark">primaryDark</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="secondaryLight">secondaryLight</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="success">success</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <Box mb={25} bg="gray300">
+          <A hoverColor="white">white</A>
+        </Box>
+      </Col>
+      <Col col="3">
+        <A hoverColor="gray100">gray100</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="gray200">gray200</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="gray300">gray300</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="gray500">gray500</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="gray700">gray700</A>
+        <Box mb={25} />
+      </Col>
+      <Col col="3">
+        <A hoverColor="gray800">gray800</A>
+        <Box mb={25} />
+      </Col>
+    </Row>
+  </div>
+</Preview>
+
+### Measure
+
+<Preview>
+  <A measure="xxs" fullWidth>XXS measure</A>
+  <A measure="xs" fullWidth>XS measure</A>
+  <A measure="sm" fullWidth>SM measure</A>
+  <A measure="md" fullWidth>MD measure</A>
+  <A measure="lg" fullWidth>LG measure</A>
+</Preview>
+
+### Font Weight
+
+<Preview>
+      <A fontWeight="thin">thin A</A>
+      <A fontWeight="light">light A</A>
+      <A fontWeight="normal">normal A</A>
+      <A fontWeight="medium">medium A</A>
+      <A fontWeight="medium">medium A</A>
+      <A fontWeight="bold">bold A</A>
+      <A fontWeight="xbold">xbold A</A>
+      <A fontWeight="black">black A</A>
+</Preview>
+
+### Font Family
+
+<Preview>
+  <Row>
+    <Col col={12}>
+      <A fontFamily="primary">Font Family primary</A>
+    </Col>
+    <Col col={12}>
+      <A fontFamily="secondary">Font Family secondary</A>
+    </Col>
+  </Row>
+</Preview>
+
+### Other props
+
+<Preview>
+  <Row>
+    <Col col={12}>
+      <A lineHeight={50}>lineHeight 50px</A>
+    </Col>
+    <Col col={12}>
+      <A letterSpacing={10}>letterSpacing 10px</A>
+    </Col>
+    <Col col={12}>
+      <A underline={false} lineThrough>lineThrough text</A>
+    </Col>
+    <Col col={12}>
+      <A uppercase>uppercase text</A>
+    </Col>
+    <Col col={12}>
+      <A underline={false}>underline false</A>
+    </Col>
+    <Col col={12}>
+      <A textDecoration="none">textDecoration - none</A>
+    </Col>
+  </Row>
+</Preview>
+
+### Props
+
+<Props of={A} />

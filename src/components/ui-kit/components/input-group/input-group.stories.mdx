@@ -1,0 +1,47 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { InputGroup } from '../../';
+import * as stories from './input-group.stories';
+
+<Meta title="Core/Input group" />
+
+<Preview withToolbar>
+  <Story name="Basic">{stories.InputGroupBasic()}</Story>
+</Preview>
+
+### Basic InputGroup
+
+Modal consists of three sections Header, Body and Footer. All of these you can directly use from Modal component only like bellow . . .
+
+```typescript
+  <InputGroup>
+    <InputGroup.Block>
+      <FormInput name="search" type="text" />
+    </InputGroup.Block>
+    <InputGroup.Addon>
+      <Button color="primary">
+        <Icon name="search" measure={18} />
+      </Button>
+    </InputGroup.Addon>
+  </InputGroup>
+  <InputGroup>
+    <InputGroup.Addon>$</InputGroup.Addon>
+    <InputGroup.Block>
+      <FormInput name="test" type="text" />
+    </InputGroup.Block>
+    <InputGroup.Addon>%</InputGroup.Addon>
+  </InputGroup>
+```
+
+# InputGroup props
+
+<Props of={InputGroup} />
+
+### Attributes InputGroup
+```
+export interface InputGroupStaticProps {
+  Addon?: FC<InputGroupElementProps> & WithStyle;
+  Text?: FC<InputGroupElementProps> & WithStyle;
+  Block?: FC<InputGroupElementProps> & WithStyle;
+}
+```
+

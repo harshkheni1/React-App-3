@@ -1,0 +1,36 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Media } from '../../';
+import * as stories from './media.stories';
+
+<Meta title="Core/Media" component={Media} />
+
+### Basic Media
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Vendor List Item">{stories.VendorListItem()}</Story>
+</Preview>
+
+### Media Attributes
+
+```
+interface MediaStaticProps {
+  Body: FC<MediaBodyProps> & WithStyle;
+  Aside: FC<MediaAsideProps> & WithStyle;
+}
+```
+
+### Media Props
+
+<Props of={Media} />
+
+### Props Media.Aside
+
+<Props of={Media.Aside} />
+
+### Props Media.Body
+
+<Props of={Media.Body} />

@@ -1,0 +1,318 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Form } from 'react-uforms';
+import {
+  Box,
+  FormCheckboxField,
+  FormCheckboxBlockField,
+  FormCheckboxRawField,
+  FormCheckboxGroupField,
+  FormCheckboxGroupItem,
+  FormCheckboxBlockGroupItem,
+  Button,
+  Row,
+  Col,
+} from '../../../';
+import * as stories from './checkbox.stories';
+
+<Meta title="Form/Checkbox" />
+
+<Preview withToolbar>
+  <Story name="Field Basic">{stories.CheckboxFieldBasic()}</Story>
+  <Story name="Raw Field Basic">{stories.CheckboxRawFieldBasic()}</Story>
+  <Story name="Group Field Basic">{stories.CheckboxGroupFieldBasic()}</Story>
+  <Story name="Block Field">{stories.CheckboxBlockFieldBasic()}</Story>
+  <Story name="Block Group Field">{stories.CheckboxBlockGroupFieldBasic()}</Story>
+</Preview>
+
+### Checkbox Field Basics
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}
+  >
+    <Row>
+      <Col col={3}>
+        <FormCheckboxField
+              name="formCheckboxField"
+              label="Basic Label"
+              measure="md"
+              color="white"
+              disabled={false}
+              toggle={false}
+              onValue={false}
+              offValue={true}
+            />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxField
+              name="formCheckboxFieldDisabled"
+              label="Basic Label Disabled"
+              measure="md"
+              color="white"
+              disabled={true}
+              toggle={false}
+              onValue={false}
+              offValue={true}
+            />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxField
+              name="formCheckboxFieldToggle"
+              label="Toggle Label"
+              measure="md"
+              color="white"
+              disabled={false}
+              toggle={true}
+              onValue={false}
+              offValue={true}
+            />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxField
+              name="formCheckboxFieldToggleDisabled"
+              label="Toggle Label Disabled"
+              measure="md"
+              color="white"
+              disabled={true}
+              toggle={true}
+              onValue={false}
+              offValue={true}
+            />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Checkbox Raw Field
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}
+  >
+    <Row>
+      <Col col={3}>
+        <FormCheckboxRawField
+              name="formCheckboxField"
+              label="Basic Label"
+              measure="md"
+              color="white"
+              disabled={false}
+              toggle={false}
+              onValue={false}
+              offValue={true}
+            />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxRawField
+              name="formCheckboxFieldDisabled"
+              label="Basic Label Disabled"
+              measure="md"
+              color="white"
+              disabled={true}
+              toggle={false}
+              onValue={false}
+              offValue={true}
+            />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxRawField
+              name="formCheckboxFieldToggle"
+              label="Toggle Label"
+              measure="md"
+              color="white"
+              disabled={false}
+              toggle={true}
+              onValue={false}
+              offValue={true}
+            />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxRawField
+              name="formCheckboxFieldToggleDisabled"
+              label="Toggle Label Disabled"
+              measure="md"
+              color="white"
+              disabled={true}
+              toggle={true}
+              onValue={false}
+              offValue={true}
+            />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Checkbox Group Field
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}
+    defaultValues={{
+          testCheckbox1: ['test2', 'test3'],
+          testCheckbox2: ['test1', 'test3'],
+        }}
+  >
+    <Row>
+      <Col col={3}>
+        <FormCheckboxGroupField name="testCheckbox1" label="Basic group">
+          <FormCheckboxGroupItem label="Test 1" value="test1" mb={15} />
+          <FormCheckboxGroupItem label="Test 2" value="test2" mb={15} />
+          <FormCheckboxGroupItem label="Test 3" value="test3" mb={15} />
+        </FormCheckboxGroupField>
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxGroupField name="testCheckbox2" label="Toggle group">
+          <FormCheckboxGroupItem toggle={true} label="Test 1" value="test1" mb={15} />
+          <FormCheckboxGroupItem toggle={true} label="Test 2" value="test2" mb={15} />
+          <FormCheckboxGroupItem toggle={true} label="Test 3" value="test3" mb={15} />
+        </FormCheckboxGroupField>
+        <Box mt={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Block Field
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}
+  >
+    <Row>
+      <Col col={3}>
+        <FormCheckboxBlockField
+            color="white"
+            inline
+            label="Solid Checkbox"
+            m={[0,8,8,0]}
+            measure="md"
+            name="test_checkbox1"
+            offValue
+            variant="solid"
+          />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxBlockField
+            color="primary"
+            inline
+            label="Outlined Checkbox"
+            m={[0,8,8,0]}
+            measure="md"
+            name="test_checkbox2"
+            offValue
+            variant="outlined"
+          />
+        <Box mt={15} />
+      </Col>
+      <Col col={3}>
+        <FormCheckboxBlockField
+            disabled={true}
+            color="white"
+            inline
+            label="Disabled Checkbox"
+            m={[0,8,8,0]}
+            measure="md"
+            name="test_checkbox3"
+            offValue
+            variant="solid"
+          />
+        <Box mt={15} />
+      </Col>
+      <Col col={12}>
+        <FormCheckboxBlockField
+            disabled={true}
+            color="white"
+            inline={false}
+            label="Inline False Checkbox"
+            m={[0,8,8,0]}
+            measure="md"
+            name="test_checkbox3"
+            offValue
+            variant="solid"
+          />
+        <Box mt={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+### Block Group Field
+<Preview>
+  <Form
+    onSubmit={() => {
+      return;
+    }}
+  >
+    <Row>
+      <Col col={6}>
+        <FormCheckboxGroupField name="testCheckbox" label="Outlined group">
+          <FormCheckboxBlockGroupItem
+            label="Test 1"
+            value="test1"
+            variant="outlined"
+            inline={true}
+            m={[0, 8, 8, 0]}
+          />
+          <FormCheckboxBlockGroupItem
+            label="Test 2"
+            value="test2"
+            variant="outlined"
+            inline={true}
+            m={[0, 8, 8, 0]}
+          />
+          <FormCheckboxBlockGroupItem
+            label="Test 3"
+            value="test3"
+            variant="outlined"
+            inline={true}
+            m={[0, 8, 8, 0]}
+          />
+        </FormCheckboxGroupField>
+        <Box mt={15} />
+      </Col>
+      <Col col={6}>
+        <FormCheckboxGroupField name="testCheckbox" label="Solid group">
+          <FormCheckboxBlockGroupItem
+            label="Test 1"
+            value="test1"
+            variant="solid"
+            inline={true}
+            m={[0, 8, 8, 0]}
+          />
+          <FormCheckboxBlockGroupItem
+            label="Test 2"
+            value="test2"
+            variant="solid"
+            inline={true}
+            m={[0, 8, 8, 0]}
+          />
+          <FormCheckboxBlockGroupItem
+            label="Test 3"
+            value="test3"
+            variant="solid"
+            inline={true}
+            m={[0, 8, 8, 0]}
+          />
+        </FormCheckboxGroupField>
+        <Box mt={15} />
+      </Col>
+    </Row>
+  </Form>
+</Preview>
+
+
+# FormCheckboxField props
+
+<Props of={FormCheckboxField} />

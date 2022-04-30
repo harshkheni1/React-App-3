@@ -1,0 +1,31 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Row, Col, Nav } from '../../';
+import * as stories from './nav.stories';
+
+<Meta title="Core/Nav" component={Nav} />
+
+### Basic Nav
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+### Nav Attributes
+```
+interface NavStaticProps {
+  Item?: FC<NavItemProps> & WithStyle;
+  Link?: FC<NavLinkProps> & WithStyle;
+}
+```
+
+### Props Nav
+
+<Props of={Nav} />
+
+### Props Nav.Item
+
+<Props of={Nav.Item} />
+
+### Props Nav.Link
+
+<Props of={Nav.Link} />

@@ -1,0 +1,94 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Form } from 'react-uforms';
+import { Box, FormGroup, FormGroupNav, FormInputField, Button } from '../../../';
+import * as stories from './group.stories';
+
+<Meta title="Form/Steps" />
+
+<Preview withToolbar>
+  <Story name="Field Basic">{stories.StepsBasic()}</Story>
+</Preview>
+
+### Basic
+<Preview>
+  <Form>
+    <Box
+      bg="secondary"
+      p={[20,0]}
+    >
+      <FormGroupNav />
+    </Box>
+    <FormGroup name="General Info">
+      <FormInputField
+        disabled={false}
+        label="Field 1"
+        mb={15}
+        measure="md"
+        name="field1"
+        placeholder="Enter"
+        required={false}
+        type="text"
+      />
+      <Box align="right">
+        <Button
+          color="primary"
+          measure="md"
+          type="button"
+          uppercase
+          variant="solid"
+        >
+          Next
+        </Button>
+      </Box>
+    </FormGroup>
+    <FormGroup
+      defaultActive
+      name="Details & Features"
+    >
+      <FormInputField
+        disabled={false}
+        label="Field 2"
+        mb={15}
+        measure="md"
+        name="field2"
+        placeholder="Enter"
+        required={false}
+        type="text"
+      />
+      <Box align="right">
+        <Button
+          color="primary"
+          measure="md"
+          type="button"
+          uppercase
+          variant="solid"
+        >
+          Next
+        </Button>
+      </Box>
+    </FormGroup>
+    <FormGroup name="Upload Images">
+        <FormInputField
+          disabled={false}
+          label="Field 3"
+          mb={15}
+          measure="md"
+          name="field3"
+          placeholder="Enter"
+          required={false}
+          type="text"
+        />
+        <Box align="right">
+          <Button
+            color="primary"
+            measure="md"
+            type="button"
+            uppercase
+            variant="solid"
+          >
+            Next
+          </Button>
+        </Box>
+      </FormGroup>
+  </Form>
+</Preview>

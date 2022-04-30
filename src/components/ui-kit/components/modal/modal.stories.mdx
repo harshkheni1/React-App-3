@@ -1,0 +1,45 @@
+import { Modal } from '../../';
+import { ModalDefault } from './const';
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import * as stories from './modal.stories';
+
+<Meta title="Core/Modal" component={Modal} />
+
+# Modal
+
+### Basic Modal
+
+Modal consists of three sections Header, Body and Footer. All of these you can directly use from Modal component only like bellow . . .
+
+```typescript
+<Modal isOpen onClose={changeModalState(false)}>
+    <Modal.Header>Add User</Modal.Header>
+    <Modal.Body>
+        <Input id="name-input" type="text" fullWidth label="Name" placeholder="Enter your Name" />
+    </Modal.Body>
+    <Modal.Footer>
+        <Button variant="outlined">Add User</Button>
+    </Modal.Footer>
+</Modal>
+```
+
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic(ModalDefault)}</Story>
+    <Story name="Img">{stories.ModalImg()}</Story>
+    <Story name="Carousel">{stories.ModalCarousel()}</Story>
+</Preview>
+
+### Modal Attributes
+
+```
+interface ModalStaticProps {
+  Dialog?: FC<ModalDialogProps> & WithStyle;
+  Header?: FC;
+  Body?: FC<SpacingProps & FullWidthHelper>;
+  Footer?: FC<SpacingProps & FullWidthHelper>;
+}
+```
+
+### Modal Props
+
+<Props of={Modal} />

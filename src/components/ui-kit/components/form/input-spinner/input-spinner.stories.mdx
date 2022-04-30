@@ -1,0 +1,18 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { InputSpinner } from '../../../';
+import * as stories from './input-spinner.stories';
+
+<Meta title="Form/Input Spinner" component={InputSpinner} />
+
+# InputSpinner
+<Preview withToolbar>
+    <Story name="Basic">{stories.Basic()}</Story>
+</Preview>
+
+# InputSpinner Example
+<Preview>
+  <InputSpinner id="quantity" name="quantity" min={1} max={4} />
+</Preview>
+
+### Props
+<Props of={InputSpinner} />
